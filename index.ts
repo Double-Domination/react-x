@@ -9,4 +9,3 @@ console.log(url);
 axios.get(url);
 
 console.log('HI');
-

@@ -33,6 +33,8 @@ const printStats = (item: IReportable): void => {
 // generate numbers array
 
 class Vehicle {
+  constructor(public paintJob: string) {}
+
   public drive(): void {
     console.log(' keep on rolling');
   }
@@ -46,12 +48,16 @@ class Vehicle {
   }
 }
 
-const vehicle = new Vehicle();
+// const vehicle = new Vehicle();
 
 //vehicle.drive();
 // vehicle.lockTarget();
 
 class Tank extends Vehicle {
+  constructor(public weaponCaliber: number, public paintJob: string) {
+    super(paintJob);
+  }
+
   //@override
   public drive() {
     console.log('Tam ta da dam!');
@@ -72,8 +78,14 @@ class Tank extends Vehicle {
   }
 }
 
-const rhino = new Tank();
+// const rhino = new Tank();
+const mustang = new Vehicle('racing gears');
+
+const lemanRuss = new Tank(152, 'green camo');
+
+console.log(lemanRuss.paintJob);
+console.log(lemanRuss.weaponCaliber);
 
 //rhino.fireMainWeapon();
 //rhino.jumpstart();
-rhino.engageTheEnemy();
+//rhino.engageTheEnemy();
