@@ -1,5 +1,6 @@
 import faker from 'faker';
 
+export const redIsFast = 'fas';
 
 class User {
   name: string;
@@ -8,8 +9,18 @@ class User {
     lat: number;
     lng: number;
   };
+
+  constructor() {
+    this.name = faker.name.firstName();
+    this.location = {
+      lat: parseFloat(faker.address.latitude()),
+      lng: parseFloat(faker.address.longitude()),
+    };
+  }
 }
 
-const syu = faker.name.findName();
+// const syu = faker.name.findName();
+const fakeAddressLatitude = faker.address.latitude();
 
-console.log(syu);
+// const metilen = new User();
+// console.log(fakeAddressLatitude);
