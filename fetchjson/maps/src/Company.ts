@@ -1,0 +1,1 @@
+//genetrate array with random numbers

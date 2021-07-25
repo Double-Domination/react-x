@@ -1,42 +1,48 @@
 // create empty arraysm
-const someString = 'CreatedString';
-const someStringArr = someString.split('');
+import { User } from './User';
 
-const reducedToBinary = someStringArr.reduce((accum, current) => {
-  const extractedASCII = current.charCodeAt(0);
-  const convertedToBinary = extractedASCII.toString(2);
-  return (accum += convertedToBinary);
-}, '');
+console.log(new User());
+//console.log(redIsFast);
 
-const reducedToBinaryArr = reducedToBinary.split('');
+// const someString = 'CreatedString';
+// const someStringArr = someString.split('');
 
-const splitByBytes = reducedToBinaryArr.reduce((accum, current) => {
-  const firstEncodedBlock = parseInt(current) ? '0' : '00';
+// const reducedToBinary = someStringArr.reduce((accum, current) => {
+//   const extractedASCII = current.charCodeAt(0);
+//   const convertedToBinary = extractedASCII.toString(2);
+//   return (accum += convertedToBinary);
+// }, '');
 
-  return (accum += firstEncodedBlock + ' ');
-}, '');
+// const reducedToBinaryArr = reducedToBinary.split('');
 
-console.log(reducedToBinary);
-function splitBinaryToBlocksByByte(recivedBytesString) {
-  let result = '';
-  let currentByte;
-  let previousByte;
-  let sameByteCouter = 0;
-  for (let i = 0; i < recivedBytesString.length; i++) {
-    if (currentByte === recivedBytesString[i - 1]) {
-      currentByte = recivedBytesString[i];
-      sameByteCouter += 1;
-    } else if (currentByte !== recivedBytesString[i - 1]) {
-      result += `${currentByte}x${sameByteCouter} `;
-      sameByteCouter = 0;
-    }
-  }
+// const splitByBytes = reducedToBinaryArr.reduce((accum, current) => {
+//   const firstEncodedBlock = parseInt(current) ? '0' : '00';
 
-  return result;
-}
+//   return (accum += firstEncodedBlock + ' ');
+// }, '');
 
-const processed = splitBinaryToBlocksByByte(reducedToBinary);
-console.log(processed);
+// // TODO make this task done
+// console.log(reducedToBinary);
+// function splitBinaryToBlocksByByte(recivedBytesString) {
+//   let result = '';
+//   let currentByte;
+//   let previousByte;
+//   let sameByteCouter = 0;
+//   for (let i = 0; i < recivedBytesString.length; i++) {
+//     if (currentByte === recivedBytesString[i - 1]) {
+//       currentByte = recivedBytesString[i];
+//       sameByteCouter += 1;
+//     } else if (currentByte !== recivedBytesString[i - 1]) {
+//       result += `${currentByte}x${sameByteCouter} `;
+//       sameByteCouter = 0;
+//     }
+//   }
+
+//   return result;
+// }
+
+// const processed = splitBinaryToBlocksByByte(reducedToBinary);
+// console.log(processed);
 
 //console.log(reducedToBinary)
 // console.log(splitByBytes)

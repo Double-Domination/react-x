@@ -2,7 +2,7 @@ import faker from 'faker';
 
 export const redIsFast = 'fas';
 
-class User {
+export class User {
   name: string;
 
   location: {
@@ -19,8 +19,12 @@ class User {
   }
 }
 
+
+
+// const metil = new User;
+// console.log(metil)
 // const syu = faker.name.findName();
-const fakeAddressLatitude = faker.address.latitude();
+//const fakeAddressLatitude = faker.address.latitude();
 
 // const metilen = new User();
 // console.log(fakeAddressLatitude);
